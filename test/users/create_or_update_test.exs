@@ -41,7 +41,7 @@ defmodule Flightex.Users.CreateOrUpdateTest do
 
       expected_response = {:error, "Cpf must be a String"}
 
-      response = CreateOrUpdate.call(params)
+      response = Flightex.create_or_update_user(params)
 
       assert response == expected_response
     end
